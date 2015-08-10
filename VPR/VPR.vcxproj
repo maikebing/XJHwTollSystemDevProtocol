@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{59D3BD79-B3AE-4108-A625-BC84B62F36C2}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>VPR</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(ProjectDir)\VPR\;D:\Works\Linux\toolchain_R2_EABI\usr\arm-unknown-linux-gnueabi\sysroot\usr\include;D:\Works\Linux\toolchain_R2_EABI\toolchain_R2_EABI\usr\include;D:\Works\Linux\toolchain_R2_EABI\opt\ext-toolchain\lib\gcc\arm-none-linux-gnueabi\4.6.1\include;D:\Works\Linux\toolchain_R2_EABI\opt\ext-toolchain\lib\gcc\arm-none-linux-gnueabi\4.6.1\include-fixed;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="libVpr_HW.so" />
+    <None Include="makefile" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.c" />
+    <ClCompile Include="pub.c" />
+    <ClCompile Include="vpr_sdk.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pub.h" />
+    <ClInclude Include="vpr_sdk.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties WinGDB_qVB57QUOT0lynJh0o1aKEg_strMakefileName="" WinGDB_qVB57QUOT0lynJh0o1aKEg_strMakefileCompilerC="" WinGDB_qVB57QUOT0lynJh0o1aKEg_strMakefileCompilerCXX="" WinGDB_qVB57QUOT0lynJh0o1aKEg_strMakefileAR="" WinGDB_qVB57QUOT0lynJh0o1aKEg_strMakefileRM="" WinGDB_qVB57QUOT0lynJh0o1aKEg_strMakefileMKDIR="" WinGDB_qVB57QUOT0lynJh0o1aKEg_strMakefileIntDir="" WinGDB_qVB57QUOT0lynJh0o1aKEg_strMakefileDestDir="" WinGDB_qVB57QUOT0lynJh0o1aKEg_strMakefileCFLAGS="" WinGDB_qVB57QUOT0lynJh0o1aKEg_strMakefileCXXFLAGS="" WinGDB_qVB57QUOT0lynJh0o1aKEg_strMakefileLDFLAGS="" WinGDB_qVB57QUOT0lynJh0o1aKEg_bMakefileAskBeforeOverwrite="false" WinGDB_qVB57QUOT0lynJh0o1aKEg_strRemoteBuildCommand="" WinGDB_qVB57QUOT0lynJh0o1aKEg_strRemoteRebuildCommand="" WinGDB_qVB57QUOT0lynJh0o1aKEg_strRemoteCleanCommand="" WinGDB_qVB57QUOT0lynJh0o1aKEg_strRemoteDeployCommand="" WinGDB_qVB57QUOT0lynJh0o1aKEg_pathRemoteBuildDirectory="" WinGDB_qVB57QUOT0lynJh0o1aKEg_strRemoteBuildVariables="" WinGDB_qVB57QUOT0lynJh0o1aKEg_bDeployBeforeStartDebugging="false" WinGDB_qVB57QUOT0lynJh0o1aKEg_bDeployOnlyIfFileChanged="false" WinGDB_qVB57QUOT0lynJh0o1aKEg_pathDeployFile="" WinGDB_qVB57QUOT0lynJh0o1aKEg_pathDeployTargetDirectory="" WinGDB_qVB57QUOT0lynJh0o1aKEg_strRemoteSolutionBuildCommand="" WinGDB_qVB57QUOT0lynJh0o1aKEg_strRemoteSolutionRebuildCommand="" WinGDB_qVB57QUOT0lynJh0o1aKEg_strRemoteSolutionCleanCommand="" WinGDB_qVB57QUOT0lynJh0o1aKEg_strRemoteSolutionDeployCommand="" WinGDB_qVB57QUOT0lynJh0o1aKEg_pathRemoteSolutionBuildDirectory="" WinGDB_qVB57QUOT0lynJh0o1aKEg_strRemoteSolutionBuildVariables="" WinGDB_qVB57QUOT0lynJh0o1aKEg_bSolutionDeployOnlyIfFileChanged="false" WinGDB_qVB57QUOT0lynJh0o1aKEg_pathSolutionDeployFile="" WinGDB_qVB57QUOT0lynJh0o1aKEg_pathSolutionDeployTargetDirectory="" WinGDB_qVB57QUOT0lynJh0o1aKEg_pathCore="" WinGDB_qVB57QUOT0lynJh0o1aKEg_pathWorkingDirectory="" WinGDB_qVB57QUOT0lynJh0o1aKEg_strLaunchArguments="" WinGDB_qVB57QUOT0lynJh0o1aKEg_strLaunchEnvironment="" WinGDB_qVB57QUOT0lynJh0o1aKEg_bStopInMain="false" WinGDB_qVB57QUOT0lynJh0o1aKEg_strMainFunctionName="" WinGDB_qVB57QUOT0lynJh0o1aKEg_strTarget="" WinGDB_qVB57QUOT0lynJh0o1aKEg_pathLoadProgramPath="" WinGDB_qVB57QUOT0lynJh0o1aKEg_pathExecutableOnTarget="" WinGDB_qVB57QUOT0lynJh0o1aKEg_bServerAutoLaunch="false" WinGDB_qVB57QUOT0lynJh0o1aKEg_bUseSysroot="false" WinGDB_qVB57QUOT0lynJh0o1aKEg_pathDynamicLinker="" WinGDB_qVB57QUOT0lynJh0o1aKEg_pathServerLibraryPaths="" WinGDB_qVB57QUOT0lynJh0o1aKEg_pathServerPath="" WinGDB_qVB57QUOT0lynJh0o1aKEg_bServerPortIsForwarded="false" WinGDB_qVB57QUOT0lynJh0o1aKEg_pathExecutable="" WinGDB_qVB57QUOT0lynJh0o1aKEg_pathCustomPreLoadInitScript="" WinGDB_qVB57QUOT0lynJh0o1aKEg_pathCustomInitScript="" WinGDB_qVB57QUOT0lynJh0o1aKEg_pathCustomCondPreLoadInitScript="" WinGDB_qVB57QUOT0lynJh0o1aKEg_pathCondCustomInitScript="" WinGDB_qVB57QUOT0lynJh0o1aKEg_strAdditionalDebuggerOptions="" WinGDB_qVB57QUOT0lynJh0o1aKEg_pathSourceDirectories="" WinGDB_qVB57QUOT0lynJh0o1aKEg_pathDebugInfoDirectory="" WinGDB_qVB57QUOT0lynJh0o1aKEg_pathSysrootOnHost="" WinGDB_qVB57QUOT0lynJh0o1aKEg_pathSysrootOnTarget="" WinGDB_qVB57QUOT0lynJh0o1aKEg_pathSharedLibraryDirectories="" WinGDB_qVB57QUOT0lynJh0o1aKEg_strVisualizerProfile="" WinGDB_qVB57QUOT0lynJh0o1aKEg_bSourceSession="false" WinGDB_qVB57QUOT0lynJh0o1aKEg_pathExecutableOnBuildHost="" WinGDB_qVB57QUOT0lynJh0o1aKEg_bForwardX11ForDebugging="false" WinGDB_qVB57QUOT0lynJh0o1aKEg_bLaunchDebuggerInSudo="false" WinGDB_qVB57QUOT0lynJh0o1aKEg_bDisableHangReporter="false" WinGDB_qVB57QUOT0lynJh0o1aKEg_bUseProtoCtl="false" WinGDB_qVB57QUOT0lynJh0o1aKEg_pathProtoCtlLogFile="" WinGDB_qVB57QUOT0lynJh0o1aKEg_pathDebugger="" WinGDB_qVB57QUOT0lynJh0o1aKEg_pathToolchain="" WinGDB_qVB57QUOT0lynJh0o1aKEg_bReuseStandardBuildCommand="false" WinGDB_qVB57QUOT0lynJh0o1aKEg_strDebugHostLogin="" WinGDB_qVB57QUOT0lynJh0o1aKEg_strBuildHostLogin="" WinGDB_qVB57QUOT0lynJh0o1aKEg_strDebugTargetLogin="" WinGDB_TWdaRyclTWdkYdOXLdSygg_strMakefileName="" WinGDB_TWdaRyclTWdkYdOXLdSygg_strMakefileCompilerC="" WinGDB_TWdaRyclTWdkYdOXLdSygg_strMakefileCompilerCXX="" WinGDB_TWdaRyclTWdkYdOXLdSygg_strMakefileAR="" WinGDB_TWdaRyclTWdkYdOXLdSygg_strMakefileRM="" WinGDB_TWdaRyclTWdkYdOXLdSygg_strMakefileMKDIR="" WinGDB_TWdaRyclTWdkYdOXLdSygg_strMakefileIntDir="" WinGDB_TWdaRyclTWdkYdOXLdSygg_strMakefileDestDir="" WinGDB_TWdaRyclTWdkYdOXLdSygg_strMakefileCFLAGS="" WinGDB_TWdaRyclTWdkYdOXLdSygg_strMakefileCXXFLAGS="" WinGDB_TWdaRyclTWdkYdOXLdSygg_strMakefileLDFLAGS="" WinGDB_TWdaRyclTWdkYdOXLdSygg_bMakefileAskBeforeOverwrite="false" WinGDB_TWdaRyclTWdkYdOXLdSygg_strRemoteBuildCommand="" WinGDB_TWdaRyclTWdkYdOXLdSygg_strRemoteRebuildCommand="" WinGDB_TWdaRyclTWdkYdOXLdSygg_strRemoteCleanCommand="" WinGDB_TWdaRyclTWdkYdOXLdSygg_strRemoteDeployCommand="" WinGDB_TWdaRyclTWdkYdOXLdSygg_pathRemoteBuildDirectory="" WinGDB_TWdaRyclTWdkYdOXLdSygg_strRemoteBuildVariables="" WinGDB_TWdaRyclTWdkYdOXLdSygg_bDeployBeforeStartDebugging="false" WinGDB_TWdaRyclTWdkYdOXLdSygg_bDeployOnlyIfFileChanged="false" WinGDB_TWdaRyclTWdkYdOXLdSygg_pathDeployFile="" WinGDB_TWdaRyclTWdkYdOXLdSygg_pathDeployTargetDirectory="" WinGDB_TWdaRyclTWdkYdOXLdSygg_strRemoteSolutionBuildCommand="" WinGDB_TWdaRyclTWdkYdOXLdSygg_strRemoteSolutionRebuildCommand="" WinGDB_TWdaRyclTWdkYdOXLdSygg_strRemoteSolutionCleanCommand="" WinGDB_TWdaRyclTWdkYdOXLdSygg_strRemoteSolutionDeployCommand="" WinGDB_TWdaRyclTWdkYdOXLdSygg_pathRemoteSolutionBuildDirectory="" WinGDB_TWdaRyclTWdkYdOXLdSygg_strRemoteSolutionBuildVariables="" WinGDB_TWdaRyclTWdkYdOXLdSygg_bSolutionDeployOnlyIfFileChanged="false" WinGDB_TWdaRyclTWdkYdOXLdSygg_pathSolutionDeployFile="" WinGDB_TWdaRyclTWdkYdOXLdSygg_pathSolutionDeployTargetDirectory="" WinGDB_TWdaRyclTWdkYdOXLdSygg_pathCore="" WinGDB_TWdaRyclTWdkYdOXLdSygg_pathWorkingDirectory="" WinGDB_TWdaRyclTWdkYdOXLdSygg_strLaunchArguments="" WinGDB_TWdaRyclTWdkYdOXLdSygg_strLaunchEnvironment="" WinGDB_TWdaRyclTWdkYdOXLdSygg_bStopInMain="false" WinGDB_TWdaRyclTWdkYdOXLdSygg_strMainFunctionName="" WinGDB_TWdaRyclTWdkYdOXLdSygg_strTarget="" WinGDB_TWdaRyclTWdkYdOXLdSygg_pathLoadProgramPath="" WinGDB_TWdaRyclTWdkYdOXLdSygg_pathExecutableOnTarget="" WinGDB_TWdaRyclTWdkYdOXLdSygg_bServerAutoLaunch="false" WinGDB_TWdaRyclTWdkYdOXLdSygg_bUseSysroot="false" WinGDB_TWdaRyclTWdkYdOXLdSygg_pathDynamicLinker="" WinGDB_TWdaRyclTWdkYdOXLdSygg_pathServerLibraryPaths="" WinGDB_TWdaRyclTWdkYdOXLdSygg_pathServerPath="" WinGDB_TWdaRyclTWdkYdOXLdSygg_bServerPortIsForwarded="false" WinGDB_TWdaRyclTWdkYdOXLdSygg_pathExecutable="" WinGDB_TWdaRyclTWdkYdOXLdSygg_pathCustomPreLoadInitScript="" WinGDB_TWdaRyclTWdkYdOXLdSygg_pathCustomInitScript="" WinGDB_TWdaRyclTWdkYdOXLdSygg_pathCustomCondPreLoadInitScript="" WinGDB_TWdaRyclTWdkYdOXLdSygg_pathCondCustomInitScript="" WinGDB_TWdaRyclTWdkYdOXLdSygg_strAdditionalDebuggerOptions="" WinGDB_TWdaRyclTWdkYdOXLdSygg_pathSourceDirectories="" WinGDB_TWdaRyclTWdkYdOXLdSygg_pathDebugInfoDirectory="" WinGDB_TWdaRyclTWdkYdOXLdSygg_pathSysrootOnHost="" WinGDB_TWdaRyclTWdkYdOXLdSygg_pathSysrootOnTarget="" WinGDB_TWdaRyclTWdkYdOXLdSygg_pathSharedLibraryDirectories="" WinGDB_TWdaRyclTWdkYdOXLdSygg_strVisualizerProfile="" WinGDB_TWdaRyclTWdkYdOXLdSygg_bSourceSession="false" WinGDB_TWdaRyclTWdkYdOXLdSygg_pathExecutableOnBuildHost="" WinGDB_TWdaRyclTWdkYdOXLdSygg_bForwardX11ForDebugging="false" WinGDB_TWdaRyclTWdkYdOXLdSygg_bLaunchDebuggerInSudo="false" WinGDB_TWdaRyclTWdkYdOXLdSygg_bDisableHangReporter="false" WinGDB_TWdaRyclTWdkYdOXLdSygg_bUseProtoCtl="false" WinGDB_TWdaRyclTWdkYdOXLdSygg_pathProtoCtlLogFile="" WinGDB_TWdaRyclTWdkYdOXLdSygg_pathDebugger="" WinGDB_TWdaRyclTWdkYdOXLdSygg_pathToolchain="" WinGDB_TWdaRyclTWdkYdOXLdSygg_bReuseStandardBuildCommand="false" WinGDB_TWdaRyclTWdkYdOXLdSygg_strDebugHostLogin="" WinGDB_TWdaRyclTWdkYdOXLdSygg_strBuildHostLogin="" WinGDB_TWdaRyclTWdkYdOXLdSygg_strDebugTargetLogin="" WinGDB_rLWppUn8DCB6IkK-CooeCg_strProjectStateSignals="" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
